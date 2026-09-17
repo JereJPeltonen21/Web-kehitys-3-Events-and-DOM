@@ -1,0 +1,23 @@
+body {
+    padding: 50px;
+    background-color: lightblue;
+}
+
+h1 {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+p, a{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+    color: red;
+}
+
+img {
+    height: 300px;
+    border-radius: 15px;
+    border: 1px solid black;
+    box-shadow: 5px 10px 18px black;
+}
