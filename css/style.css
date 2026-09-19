@@ -3,6 +3,10 @@ body {
     background-color: lightblue;
 }
 
+.hoverzone, .hoverzone2{
+    width: 200px;
+}
+
 h1 {
     font-family: Verdana, Geneva, sans-serif;
 }

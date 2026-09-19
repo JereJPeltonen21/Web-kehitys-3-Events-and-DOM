@@ -13,8 +13,56 @@
     <p>Lempi eläin on Susi</p>
     <img src="https://s3.animalia.bio/animals/photos/full/original/insulation.webp" alt="Susi Kuva">
 
-    <p><button id="alertButton" type="button">Klikkaa Susia</button></p>
-
     <p><a href="https://fi.wikipedia.org/wiki/Susi" target="_blank">Lisätietoa Susista</a></p>
+
+    <div class="hoverzone">
+        <!--Yritin kovaa saada sen muuttumaan click komennolla mutta en saanut niin tein tän onclick eventillä, jos saan sen tehtyä click niin lisään sen komentoituna-->
+        <h1 id="header1" onclick="testFunction()">Harjoitus 1</h1>
+    </div>
+
+    <p>Paina ensimmäistä nappia niin saat ilmoituksen, toisesta napista saat taulukon sudesta</p>
+
+    <p><button id="alertButton" type="button">Paina Minua</button></p>
+    <p><button id="animalTable" type="button">Eläintaulukko</button></p>
+
+    <div id="tableContainer"></div>
+
+    <div class="hoverzone2">
+        <h1 id="header2">Harjoitus 2</h1>
+    </div>
+    <p>Laita hiiri Harjoitus 2 päälle ja avaa konsole niin tulee viestä ja jos painat Harjoitus 1 tekstiä niin se muuttuu</p>
+
+    <h1>Harjoitus 3</h1>
+
+     <ul>
+        <li>Lisää <strong>focus</strong>-tapahtuma <code>textarea</code>-kenttään. Se näyttää viestin <code>#status</code>-elementissä ja voi vaihtaa taustaväriä.</li>
+        <li>Lisää <strong>blur</strong>-tapahtuma, joka poistaa viestin ja palauttaa tyylit.</li>
+        <li>Lisää <strong>input</strong>-kuuntelija:
+            <ul>
+                <li>päivitä merkkimäärä <code>#charcount</code>-elementtiin (muodossa X/200)</li>
+                <li>päivitä esikatselu <code>#preview</code>-elementtiin</li>
+            </ul>
+        </li>
+    </ul>
+
+    <form id="feedbackForm" novalidate>
+        <label for="feedback">Palaute:</label><br>
+        <textarea id="feedback" placeholder="Kirjoita palautteesi..." rows="5"></textarea><br>
+
+        <div style="margin: 4px 0;">
+            <span id="charcount">0/200</span>
+            <span id="status" aria-live="polite" style="margin-left: 8px; color: #666;"></span>
+        </div>
+
+        <button id="sendBtn" type="submit">Lähetä</button>
+    </form>
+
+    <h3>Esikatselu</h3>
+    <div id="preview" style="border: 1px solid #ccc; padding: 8px; min-height: 40px; background: #fafafa;">
+        (Esikatselu tulee tähän)
+    </div>
+
+
+    
 </body>
 </html>
