@@ -9,6 +9,9 @@ const status = document.getElementById("status");
 const charcount = document.getElementById("charcount");
 const preview = document.getElementById("preview");
 
+// Harjoitus 4
+const feedbackForm = document.getElementById("feedbackForm");
+
 animalButton.addEventListener("click", function () {
     alert("Klikkasit minua!");
 });
@@ -66,4 +69,27 @@ feedback.addEventListener("blur", function () {
 feedback.addEventListener("input", function () {
     charcount.textContent = feedback.value.length + "/200";
     preview.textContent = feedback.value;
+});
+
+feedbackForm.addEventListener("submit", function (event) {
+    event.preventDefault()
+
+    const length = feedback.value.length;
+
+    if (length < 10 || length > 200) {
+        status.textContent = "Palaute pitää olla 10-200 merkkiä pitkä.";
+        return;
+    }
+
+    feedback.value = "";
+    status.textContent = "Kiitos palautteesta!";
+    preview.textContent = "";
+});
+
+window.addEventListener("keydown", (e) => {
+    console.log(`Painoit nappia: ${e.key} menee myös koodissa: ${e.code}`);
+
+    document.getElementById("keybox").innerHTML = `näppäin: ${e.key}, koodissa: ${e.code}`
+    document.getElementById("keyinfo").innerHTML = `${e.key}`;
+    document.getElementById("keyinfo").style.fontSize = "xx-large";
 });
